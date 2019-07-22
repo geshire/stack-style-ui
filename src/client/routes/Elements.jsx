@@ -8,7 +8,7 @@ import ButtonSizesCode from "./elements/ButtonSizes.html";
 import ButtonIconsCode from "./elements/ButtonIcons.html";
 
 const Elements = () => (
-  <div id="view-elements" className="fill-width">
+  <section id="view-elements" className="fill-width">
     <Header title="Elements" />
 
     <div>
@@ -71,7 +71,7 @@ const Elements = () => (
       </ul>
       <CodeBlock>{ButtonIconsCode}</CodeBlock>
     </div>
-  </div>
+  </section>
 );
 
 Elements.propTypes = {};

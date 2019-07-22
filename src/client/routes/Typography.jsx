@@ -52,7 +52,7 @@ const Typography = () => (
     <div>
       <SubHeader title="Text Variants" />
       <SectionNote>
-        Text variant classes can be used on any <span className="weight-bold">Text</span> style.
+        Text variant classes can be used on or within any <span className="weight-bold">Text</span> style.
       </SectionNote>
 
       <p className="text-2 weight-bold">Bold</p>
@@ -65,7 +65,7 @@ const Typography = () => (
     <div>
       <SubHeader title="Line spacing" />
       <SectionNote>
-        Line spacing classes can be used on any <span className="weight-bold">Text</span> style.
+        Line spacing classes can be used on or within any <span className="weight-bold">Text</span> style.
       </SectionNote>
 
       <div style={{width: "300px"}}>
@@ -103,7 +103,7 @@ const Typography = () => (
       <div>
         <ul class="list-no-bullets">
           <li>
-            <p className="text-1 icon-left icon-arrow-left-blue-mid">Text</p>
+            <p className="text-1 icon-left icon-arrow-left-blue">Text</p>
           </li>
           <li>
             <p className="text-1 icon-right icon-chevron-down">Text</p>

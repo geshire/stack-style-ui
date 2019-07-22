@@ -1,0 +1,115 @@
+import React from "react";
+import Header from "shared/Header";
+import SubHeader from "shared/SubHeader";
+import CodeBlock from "shared/CodeBlock";
+import SectionNote from "shared/SectionNote";
+import RadioFieldsCode from "./forms/RadioFields.html";
+import SelectFieldsCode from "./forms/SelectFields.html";
+import CheckboxesCode from "./forms/Checkboxes.html";
+import InputFieldStylesCode from "./forms/InputFieldStyles.html";
+import InputFieldSizesCode from "./forms/InputFieldSizes.html";
+import InputFieldIconsCode from "./forms/InputFieldIcons.html";
+
+const Forms = ({ config }) => (
+  <section id="view-fx" className="fill-width">
+    <Header title="Forms" />
+
+    <div>
+      <SubHeader title="Input Field Styles" />
+      <SectionNote>
+        For the Input Styles below, elements must be inside a containing element with the class "form". This allows for custom form styling outside a standard "form" context.
+      </SectionNote>
+      <form className="form">
+        <ul className="list-no-bullets">
+          <li className="margin-xsmall">
+            <input type="text" placeholder="Enter..." />
+          </li>
+          {config.inputStyles.map(inputStyle => {
+            if (inputStyle.name != "default") {
+             return (
+               <li className="margin-xsmall">
+                 <input type="text" className={`input-${inputStyle.name}`} placeholder="Enter..." />
+               </li>
+             );
+            }
+          })}
+        </ul>
+      </form>
+      <CodeBlock>{InputFieldStylesCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Input Field Sizes" />
+      <form className="form">
+        <ul className="list-no-bullets">
+        {config.inputSizes.map(inputSize => {
+          if (inputSize.name != "default") {
+           return (
+             <li className="margin-xsmall">
+               <input type="text" className={`input-${inputSize.name}`} placeholder="Enter..." />
+             </li>
+           );
+         }
+        })}
+        </ul>
+      </form>
+      <CodeBlock>{InputFieldSizesCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Input Fields w/ Icons" />
+      <SectionNote>
+        Input Icon classes can be used on any <span className="weight-bold">Input</span> style or size.
+      </SectionNote>
+      <form className="form">
+        <ul className="list-no-bullets">
+           <li className="margin-xsmall">
+             <input type="text" className="icon-search-charcoal icon-right" placeholder="Enter..." />
+           </li>
+           <li className="margin-xsmall">
+             <input type="text" className="icon-search-charcoal icon-left" placeholder="Enter..." />
+           </li>
+        </ul>
+      </form>
+      <CodeBlock>{InputFieldIconsCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Checkboxes" />
+      <fieldset className="checkbox">
+        <input type="checkbox" name="example-a" id="example-a" checked />
+        <label htmlFor="example-a">
+          <span className="checkbox-icon">
+            <i className="icon-checkmark-white"></i>
+          </span>
+          <span className="checkbox-label">
+            Label
+          </span>
+        </label>
+      </fieldset>
+      <CodeBlock>{CheckboxesCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Select Fields" />
+      <fieldset className="margin-bottom-medium">
+        <select className="btn-white btn-medium icon-right icon-triangle-down">
+          <option selected disabled>Select</option>
+          <option>A</option>
+          <option>B</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <select className="text-2 icon-right icon-triangle-down">
+          <option selected disabled>Select</option>
+          <option>A</option>
+          <option>B</option>
+        </select>
+      </fieldset>
+      <CodeBlock>{SelectFieldsCode}</CodeBlock>
+    </div>
+
+  </section>
+);
+
+export default Forms;

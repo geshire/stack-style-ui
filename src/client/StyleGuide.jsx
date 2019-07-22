@@ -3,6 +3,9 @@ import { render } from "react-dom";
 import Typography from "./routes/Typography";
 import Fx from "./routes/Fx";
 import Elements from "./routes/Elements";
+import Icons from "./routes/Icons";
+import Forms from "./routes/Forms";
+import Layout from "./routes/Layout";
 
 render(
   <div className="relative">
@@ -12,10 +15,10 @@ render(
         <Typography />
         <Fx />
         <Elements />
-        {/* <Layout />
-
-        <Icons /> */}
-        </div>
+        <Icons config={window.styles.icons} list={window.styles.iconList} />
+        <Forms config={window.styles.forms} />
+        <Layout />
+      </div>
     </main>
   </div>,
   document.getElementById("style-guide"),

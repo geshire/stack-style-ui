@@ -20,6 +20,7 @@ export default (config) => {
     response.send(layout({
       baseUrl: `${config.host}:${config.port}`,
       head: config.head,
+      styles: config.styles,
     }));
   });
 

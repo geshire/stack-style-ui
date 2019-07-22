@@ -12,6 +12,7 @@ export default (config) => `
       <div id="style-guide">
       </div>
     </body>
+    <script>window.styles = ${JSON.stringify(config.styles)}</script>
     <script src="${config.baseUrl}/guide-scripts.bundle.js"></script>
   </html>
 `;

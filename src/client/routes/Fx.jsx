@@ -99,7 +99,7 @@ const Fx = () => (
       </div>
 
       <div className="margin-vert-large">
-        <span className="inline-block padding-medium border-all radius margin-medium">
+        <span className="inline-block padding-medium border-all radius-xsmall margin-medium">
           3px Radius Xsmall
         </span>
         <span className="inline-block padding-medium border-all radius-small margin-medium">
