@@ -8,6 +8,7 @@ import TextCode from "./typography/Text.html";
 import VariantsCode from "./typography/Variants.html";
 import ColorsCode from "./typography/Colors.html";
 import LineHeightCode from "./typography/LineHeight.html";
+import TextIconsCode from "./typography/TextIcons.html";
 
 const Typography = () => (
   <section id="view-typography" className="fill-width">
@@ -91,6 +92,26 @@ const Typography = () => (
       </div>
 
       <CodeBlock>{ColorsCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Text w/ Icons" />
+      <SectionNote>
+        Icon classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles.
+      </SectionNote>
+
+      <div>
+        <ul class="list-no-bullets">
+          <li>
+            <p className="text-1 icon-left icon-arrow-left-blue-mid">Text</p>
+          </li>
+          <li>
+            <p className="text-1 icon-right icon-chevron-down">Text</p>
+          </li>
+        </ul>
+      </div>
+
+      <CodeBlock>{TextIconsCode}</CodeBlock>
     </div>
   </section>
 );

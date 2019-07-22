@@ -6,6 +6,7 @@ export default (config) => `
       ${config.head}
       <link href="${config.baseUrl}/guide-styles.bundle.css" media="screen" rel="stylesheet" type="text/css">
       <link href="${config.baseUrl}/styles.min.css" media="screen" rel="stylesheet" type="text/css">
+      <link href="${config.baseUrl}/icons.min.css" media="screen" rel="stylesheet" type="text/css">
     </head>
     <body>
       <div id="style-guide">

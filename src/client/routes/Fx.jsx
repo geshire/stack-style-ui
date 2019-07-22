@@ -5,6 +5,8 @@ import CodeBlock from "shared/CodeBlock";
 import SectionNote from "shared/SectionNote";
 import BackgroundsCode from "./fx/Backgrounds.html";
 import BordersCode from "./fx/Borders.html";
+import BorderWidthsCode from "./fx/BorderWidths.html";
+import RadiusCode from "./fx/Radius.html";
 
 const Fx = () => (
   <section id="view-fx" className="fill-width">
@@ -55,21 +57,60 @@ const Fx = () => (
 
     <div>
       <SubHeader title="Borders" />
-      <ul className="list-no-bullets">
-        <li>
-          <p className="text-1">Text 1</p>
-        </li>
-        <li>
-          <p className="text-2">Text 2</p>
-        </li>
-        <li>
-          <p className="text-3">Text 3</p>
-        </li>
-        <li>
-          <p className="text-4">Text 4</p>
-        </li>
-      </ul>
-      <CodeBlock>{BordersCode}</CodeBlock>
+      <div>
+        <span className="inline-block padding-medium border-all margin-medium">
+          Border All
+        </span>
+        <span className="inline-block padding-medium border-vert margin-medium">
+          Border Vert
+        </span>
+        <span className="inline-block padding-medium border-horz margin-medium">
+          Border Horz
+        </span>
+        <span className="inline-block padding-medium border-top margin-medium">
+          Border Top
+        </span>
+        <span className="inline-block padding-medium border-bottom margin-medium">
+          Border Bottom
+        </span>
+        <span className="inline-block padding-medium border-left margin-medium">
+          Border Left
+        </span>
+        <span className="inline-block padding-medium border-right margin-medium">
+          Border Right
+        </span>
+
+        <CodeBlock>{BordersCode}</CodeBlock>
+      </div>
+
+      <div className="margin-vert-large">
+        <span className="inline-block padding-medium border-all border-mid margin-medium">
+          <span className="text--gray">
+            <strong>Border Width Mid</strong>
+          </span>
+        </span>
+        <span className="inline-block padding-medium border-all border-thick margin-medium">
+          <span className="text--gray">
+            <strong>Border Width Thick</strong>
+          </span>
+        </span>
+
+        <CodeBlock>{BorderWidthsCode}</CodeBlock>
+      </div>
+
+      <div className="margin-vert-large">
+        <span className="inline-block padding-medium border-all radius margin-medium">
+          3px Radius Xsmall
+        </span>
+        <span className="inline-block padding-medium border-all radius-small margin-medium">
+          5px Radius Small
+        </span>
+        <span className="inline-block padding-medium border-all radius margin-medium">
+          10px Radius Medium (Default)
+        </span>
+
+        <CodeBlock>{RadiusCode}</CodeBlock>
+      </div>
     </div>
 
   </section>
