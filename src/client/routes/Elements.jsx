@@ -8,7 +8,7 @@ import ButtonSizesCode from "./elements/ButtonSizes.html";
 import ButtonIconsCode from "./elements/ButtonIcons.html";
 
 const Elements = () => (
-  <section id="view-elements" className="fill-width">
+  <section id="view-elements" class="margin-bottom-xxlarge">
     <Header title="Elements" />
 
     <div>

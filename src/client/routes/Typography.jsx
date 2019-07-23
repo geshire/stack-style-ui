@@ -11,7 +11,7 @@ import LineHeightCode from "./typography/LineHeight.html";
 import TextIconsCode from "./typography/TextIcons.html";
 
 const Typography = () => (
-  <section id="view-typography" className="fill-width">
+  <section id="view-typography" class="margin-bottom-xxlarge">
     <Header title="Typography" />
 
     <div>

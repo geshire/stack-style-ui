@@ -8,7 +8,7 @@ import IconColorsCode from "./icons/IconColors.html";
 import IconSizesCode from "./icons/IconSizes.html";
 
 const Icons = ({ config, list }) => (
-  <section id="view-icons">
+  <section id="view-icons" class="margin-bottom-xxlarge">
     <Header title="Icons" />
 
     <div>
