@@ -5,13 +5,13 @@ import CodeBlock from "shared/CodeBlock";
 import SectionNote from "shared/SectionNote";
 import RadioFieldsCode from "./forms/RadioFields.html";
 import SelectFieldsCode from "./forms/SelectFields.html";
-import CheckboxesCode from "./forms/Checkboxes.html";
+import Checkboxes from "./forms/Checkboxes";
 import InputFieldStylesCode from "./forms/InputFieldStyles.html";
 import InputFieldSizesCode from "./forms/InputFieldSizes.html";
 import InputFieldIconsCode from "./forms/InputFieldIcons.html";
 
 const Forms = ({ config }) => (
-  <section id="view-fx" className="fill-width">
+  <section id="view-fx" class="margin-bottom-xxlarge">
     <Header title="Forms" />
 
     <div>
@@ -75,19 +75,47 @@ const Forms = ({ config }) => (
     </div>
 
     <div>
-      <SubHeader title="Checkboxes" />
-      <fieldset className="checkbox">
-        <input type="checkbox" name="example-a" id="example-a" checked />
-        <label htmlFor="example-a">
-          <span className="checkbox-icon">
-            <i className="icon-checkmark-white"></i>
-          </span>
-          <span className="checkbox-label">
-            Label
-          </span>
-        </label>
-      </fieldset>
-      <CodeBlock>{CheckboxesCode}</CodeBlock>
+      <SubHeader title="Checkbox Styles" />
+      <ul className="list-no-bullets">
+        {config.checkboxStyles.map((checkbox, index) => (
+          <li>
+             <fieldset className={`checkbox ${checkbox.name !== "default" ? `checkbox-${checkbox.name}` : ""}`}>
+               <input type="checkbox" name={`style-${index}`} id={`style-${index}`} />
+               <label htmlFor={`style-${index}`}>
+                 <span className="checkbox-icon">
+                   <i className="icon-checkmark-white"></i>
+                 </span>
+                 <span className="checkbox-label">
+                   Label
+                 </span>
+               </label>
+             </fieldset>
+          </li>
+         ))}
+      </ul>
+      <CodeBlock>{Checkboxes(config.checkboxStyles)}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Checkbox Sizes" />
+      <ul className="list-no-bullets">
+        {config.checkboxSizes.map((checkbox, index) => (
+          <li>
+             <fieldset className={`checkbox ${checkbox.name !== "default" ? `checkbox-${checkbox.name}` : ""}`}>
+               <input type="checkbox" name={`size-${index}`} id={`size-${index}`} />
+               <label htmlFor={`size-${index}`}>
+                 <span className="checkbox-icon">
+                   <i className="icon-checkmark-white"></i>
+                 </span>
+                 <span className="checkbox-label">
+                   Label
+                 </span>
+               </label>
+             </fieldset>
+          </li>
+         ))}
+      </ul>
+      <CodeBlock>{Checkboxes(config.checkboxSizes)}</CodeBlock>
     </div>
 
     <div>

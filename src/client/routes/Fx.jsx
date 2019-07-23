@@ -8,49 +8,18 @@ import BordersCode from "./fx/Borders.html";
 import BorderWidthsCode from "./fx/BorderWidths.html";
 import RadiusCode from "./fx/Radius.html";
 
-const Fx = () => (
-  <section id="view-fx" className="fill-width">
+const Fx = ({ config }) => (
+  <section id="view-fx" class="margin-bottom-xxlarge">
     <Header title="Fx" />
 
     <div>
       <SubHeader title="Backgrounds" />
       <ul className="list-no-bullets row">
-        <li className="bg-blue-light padding-large margin-xsmall border-all">
-          blue-light
-        </li>
-        <li className="bg-blue-mid padding-large margin-xsmall border-all">
-          blue-mid
-        </li>
-        <li className="bg-green-light padding-large margin-xsmall border-all">
-          green-light
-        </li>
-        <li className="bg-green-mid padding-large margin-xsmall border-all">
-          green-mid
-        </li>
-        <li className="bg-red-light padding-large margin-xsmall border-all">
-          red-light
-        </li>
-        <li className="bg-red-mid padding-large margin-xsmall border-all">
-          red-mid
-        </li>
-        <li className="bg-white padding-large margin-xsmall border-all">
-          white
-        </li>
-        <li className="bg-yellow-light padding-large margin-xsmall border-all">
-          yellow-light
-        </li>
-        <li className="bg-yellow-mid padding-large margin-xsmall border-all">
-          yellow-mid
-        </li>
-        <li className="bg-gray-light padding-large margin-xsmall border-all">
-          gray-light
-        </li>
-        <li className="bg-gray-mid padding-large margin-xsmall border-all">
-          gray-mid
-        </li>
-        <li className="bg-gray-dark padding-large margin-xsmall">
-          gray-dark
-        </li>
+        {config.backgroundColors.map(bg => (
+          <li className={`bg-${bg.name} padding-large margin-xsmall border-all`}>
+            {bg.name}
+          </li>
+        ))}
       </ul>
       <CodeBlock>{BackgroundsCode}</CodeBlock>
     </div>
@@ -96,6 +65,22 @@ const Fx = () => (
         </span>
 
         <CodeBlock>{BorderWidthsCode}</CodeBlock>
+      </div>
+
+      <div>
+        <SubHeader title="Borders Colors" />
+        <ul className="list-no-bullets row">
+          {config.borderColors.map(border => (
+            <li className={`border-${border.name} inline-block padding-medium border-all margin-medium`}>
+              <span className="text--gray">{border.name}</span>
+            </li>
+          ))}
+        </ul>
+        <CodeBlock>
+          {config.borderColors.map(border => (
+            `<div class="border-all border-${border.name}">${border.name}</div>\n`
+          ))}
+        </CodeBlock>
       </div>
 
       <div className="margin-vert-large">

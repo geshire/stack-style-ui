@@ -11,6 +11,7 @@ export default (config) => {
   ..............................*/
   app.use(parser.json());
   app.use(express.static(`${__dirname}/../dist`));
+  app.use(express.static(`${config.distDir}`));
   app.use(express.static(`${config.staticFiles}`));
   app.use(parser.urlencoded({ extended: true }));
 
@@ -21,6 +22,7 @@ export default (config) => {
       baseUrl: `${config.host}:${config.port}`,
       head: config.head,
       styles: config.styles,
+      logo: config.logo,
     }));
   });
 
