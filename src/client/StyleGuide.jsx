@@ -6,6 +6,7 @@ import Elements from "./routes/Elements";
 import Icons from "./routes/Icons";
 import Forms from "./routes/Forms";
 import Layout from "./routes/Layout";
+import Utils from "./routes/Utils";
 
 render(
   <div className="relative">
@@ -22,6 +23,7 @@ render(
         <Icons config={window.styles.icons} list={window.styles.iconList} />
         <Forms config={window.styles.forms} />
         <Layout config={window.styles.layout} />
+        <Utils />
       </div>
     </main>
   </div>,

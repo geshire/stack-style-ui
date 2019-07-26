@@ -66,7 +66,7 @@ const Layout = ({ config }) => (
 
     <div>
       <SubHeader title="Spacing / Padding" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         {config.spacingSizes.map(space => (
           <li className={`border-all inline-block padding-${space.name} margin-small bg-gray-light`}>
             <span className="color-gray">{space.name} {space.size}</span>
@@ -78,7 +78,7 @@ const Layout = ({ config }) => (
 
     <div>
       <SubHeader title="Spacing / Margin" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         {config.spacingSizes.map(space => (
           <li style={{
             borderStyle: "dotted",
@@ -93,6 +93,16 @@ const Layout = ({ config }) => (
       </ul>
 
       <CodeBlock>{Spacing(config.spacingSizes, "margin")}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Layout Utilities" />
+      <table>
+        <tr>
+          <td>border-box</td>
+          <td>Sets the element to use border-box sizing (as opposed to the default content-box)</td>
+        </tr>
+      </table>
     </div>
   </section>
 );

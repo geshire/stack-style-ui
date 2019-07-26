@@ -14,7 +14,7 @@ const Fx = ({ config }) => (
 
     <div>
       <SubHeader title="Backgrounds" />
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         {config.backgroundColors.map(bg => (
           <li className={`bg-${bg.name} padding-large margin-xsmall border-all`}>
             {bg.name}
@@ -69,7 +69,7 @@ const Fx = ({ config }) => (
 
       <div>
         <SubHeader title="Borders Colors" />
-        <ul className="list-no-bullets row">
+        <ul className="list-no-style row">
           {config.borderColors.map(border => (
             <li className={`border-${border.name} inline-block padding-medium border-all margin-medium`}>
               <span className="text--gray">{border.name}</span>

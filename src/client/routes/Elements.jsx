@@ -13,7 +13,7 @@ const Elements = () => (
 
     <div>
       <SubHeader title="Buttons" />
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue margin-bottom-small block">Button</button>
         </li>
@@ -38,7 +38,7 @@ const Elements = () => (
       <SectionNote>
         Button size classes can be used on any <span className="weight-bold">Button</span> style.
       </SectionNote>
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue btn-small margin-bottom-small block">Small</button>
         </li>
@@ -58,7 +58,7 @@ const Elements = () => (
         Button Icon classes can be used on any <span className="weight-bold">Button</span> style.
       </SectionNote>
 
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue btn-medium icon-arrow-left-white icon-left margin-bottom-small block">Button</button>
         </li>

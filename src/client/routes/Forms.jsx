@@ -16,11 +16,8 @@ const Forms = ({ config }) => (
 
     <div>
       <SubHeader title="Input Field Styles" />
-      <SectionNote>
-        For the Input Styles below, elements must be inside a containing element with the class "form". This allows for custom form styling outside a standard "form" context.
-      </SectionNote>
       <form className="form">
-        <ul className="list-no-bullets">
+        <ul className="list-no-style">
           <li className="margin-xsmall">
             <input type="text" placeholder="Enter..." />
           </li>
@@ -41,12 +38,12 @@ const Forms = ({ config }) => (
     <div>
       <SubHeader title="Input Field Sizes" />
       <form className="form">
-        <ul className="list-no-bullets">
+        <ul className="list-no-style">
         {config.inputSizes.map(inputSize => {
           if (inputSize.name != "default") {
            return (
              <li className="margin-xsmall">
-               <input type="text" className={`input-${inputSize.name}`} placeholder="Enter..." />
+               <input type="text" className={`input-${config.inputStyles[0].name} input-${inputSize.name}`} placeholder="Enter..." />
              </li>
            );
          }
@@ -62,12 +59,12 @@ const Forms = ({ config }) => (
         Input Icon classes can be used on any <span className="weight-bold">Input</span> style or size.
       </SectionNote>
       <form className="form">
-        <ul className="list-no-bullets">
+        <ul className="list-no-style">
            <li className="margin-xsmall">
-             <input type="text" className="icon-search-charcoal icon-right" placeholder="Enter..." />
+             <input type="text" className={`input-${config.inputStyles[0].name} icon-search-charcoal icon-right`} placeholder="Enter..." />
            </li>
            <li className="margin-xsmall">
-             <input type="text" className="icon-search-charcoal icon-left" placeholder="Enter..." />
+             <input type="text" className={`input-${config.inputStyles[0].name} icon-search-charcoal icon-left`} placeholder="Enter..." />
            </li>
         </ul>
       </form>
@@ -76,7 +73,7 @@ const Forms = ({ config }) => (
 
     <div>
       <SubHeader title="Checkbox Styles" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         {config.checkboxStyles.map((checkbox, index) => (
           <li>
              <fieldset className={`checkbox ${checkbox.name !== "default" ? `checkbox-${checkbox.name}` : ""}`}>
@@ -98,7 +95,7 @@ const Forms = ({ config }) => (
 
     <div>
       <SubHeader title="Checkbox Sizes" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         {config.checkboxSizes.map((checkbox, index) => (
           <li>
              <fieldset className={`checkbox ${checkbox.name !== "default" ? `checkbox-${checkbox.name}` : ""}`}>

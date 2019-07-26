@@ -17,7 +17,7 @@ const Icons = ({ config, list }) => (
         Labels are the html class for each icon.
       </SectionNote>
 
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
       {list.map(icon => (
         <li className="border-all border-gray-light padding-medium text-center margin-xsmall">
           <i className={icon}></i>
@@ -34,7 +34,7 @@ const Icons = ({ config, list }) => (
         Icon size classes can be used on any <span className="weight-bold">Icon</span> style.
       </SectionNote>
 
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="border-all border-gray-light padding-medium text-center margin-xsmall">
           <i className="icon-search"></i>
           <p class="text-4 margin-top-xxsmall">default</p>
@@ -59,7 +59,7 @@ const Icons = ({ config, list }) => (
         Icon color classes can be used on any <span className="weight-bold">Icon</span> style.
       </SectionNote>
 
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="border-all border-gray-light padding-medium text-center margin-xsmall">
           <i className="icon-x"></i>
           <p class="text-4 margin-top-xxsmall">default</p>

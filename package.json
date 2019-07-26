@@ -1,6 +1,6 @@
 {
   "name": "@geshire/stack-style-ui",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "React UI for Stack Style Guide",
   "author": "The Geshire Company",
   "repository": {
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-react-constant-elements": "^7.5.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
@@ -42,9 +43,9 @@
   },
   "scripts": {
     "dev:client": "webpack-dev-server --config=webpack.dev.config.js",
-    "dev:server": "nodemon -e js,hbs,json src/server/start.js --delay 0.5 --exec babel-node",
+    "dev:server": "nodemon -e js,hbs,json start.js --delay 0.5 --exec babel-node",
     "build:client": "webpack --config=webpack.prod.config.js",
     "build:server": "babel src/server -d lib --copy-files"
   },
-  "main": "lib/app.js"
+  "main": "./lib/app.js"
 }

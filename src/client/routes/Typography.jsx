@@ -9,6 +9,7 @@ import VariantsCode from "./typography/Variants.html";
 import ColorsCode from "./typography/Colors.html";
 import LineHeightCode from "./typography/LineHeight.html";
 import TextIconsCode from "./typography/TextIcons.html";
+import TextAlignmentCode from "./typography/TextAlignment.html";
 
 const Typography = () => (
   <section id="view-typography" class="margin-bottom-xxlarge">
@@ -16,7 +17,7 @@ const Typography = () => (
 
     <div>
       <SubHeader title="Headings" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         <li>
           <h3 className="head-1">Heading 1</h3>
         </li>
@@ -32,7 +33,7 @@ const Typography = () => (
 
     <div>
       <SubHeader title="Text" />
-      <ul className="list-no-bullets">
+      <ul className="list-no-style">
         <li>
           <p className="text-1">Text 1</p>
         </li>
@@ -101,7 +102,7 @@ const Typography = () => (
       </SectionNote>
 
       <div>
-        <ul class="list-no-bullets">
+        <ul class="list-no-style">
           <li>
             <p className="text-1 icon-left icon-arrow-left-blue">Text</p>
           </li>
@@ -112,6 +113,38 @@ const Typography = () => (
       </div>
 
       <CodeBlock>{TextIconsCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Alignment" />
+      <SectionNote>
+        Alignment can be used for text or any elements with <span className="weight-bold">display: inline-block</span>.
+      </SectionNote>
+
+      <div>
+        <ul class="list-no-style row">
+          <li
+            className="text-left padding-small margin-xsmall border-all"
+            style={{ width: "200px"}}
+          >
+            left
+          </li>
+          <li
+            className="text-left padding-small margin-xsmall border-all"
+            style={{ width: "200px"}}
+          >
+            center
+          </li>
+          <li
+            className="text-left padding-small margin-xsmall border-all"
+            style={{ width: "200px"}}
+          >
+            right
+          </li>
+        </ul>
+      </div>
+
+      <CodeBlock>{TextAlignmentCode}</CodeBlock>
     </div>
   </section>
 );
