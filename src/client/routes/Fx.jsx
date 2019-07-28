@@ -7,14 +7,15 @@ import BackgroundsCode from "./fx/Backgrounds.html";
 import BordersCode from "./fx/Borders.html";
 import BorderWidthsCode from "./fx/BorderWidths.html";
 import RadiusCode from "./fx/Radius.html";
+import BoxShadowsCode from "./fx/BoxShadows.js";
 
 const Fx = ({ config }) => (
   <section id="view-fx" class="margin-bottom-xxlarge">
-    <Header title="Fx" />
+    <Header anchor="fx" title="Fx" />
 
     <div>
       <SubHeader title="Backgrounds" />
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         {config.backgroundColors.map(bg => (
           <li className={`bg-${bg.name} padding-large margin-xsmall border-all`}>
             {bg.name}
@@ -69,7 +70,7 @@ const Fx = ({ config }) => (
 
       <div>
         <SubHeader title="Borders Colors" />
-        <ul className="list-no-bullets row">
+        <ul className="list-no-style row">
           {config.borderColors.map(border => (
             <li className={`border-${border.name} inline-block padding-medium border-all margin-medium`}>
               <span className="text--gray">{border.name}</span>
@@ -84,6 +85,7 @@ const Fx = ({ config }) => (
       </div>
 
       <div className="margin-vert-large">
+        <SubHeader title="Borders Radius" />
         <span className="inline-block padding-medium border-all radius-xsmall margin-medium">
           3px Radius Xsmall
         </span>
@@ -95,6 +97,19 @@ const Fx = ({ config }) => (
         </span>
 
         <CodeBlock>{RadiusCode}</CodeBlock>
+      </div>
+
+      <div className="margin-vert-large">
+        <SubHeader title="Box Shadows" />
+        <ul className="list-no-style row">
+          {config.boxShadows.map(shadow => (
+            <li className="margin-xsmall">
+              <div className={`padding-large shadow-${shadow.name}`}></div>
+            </li>
+          ))}
+        </ul>
+
+        <CodeBlock>{BoxShadowsCode(config.boxShadows)}</CodeBlock>
       </div>
     </div>
 

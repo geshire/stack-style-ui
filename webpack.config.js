@@ -16,6 +16,7 @@ module.exports = {
     modules: [
       "node_modules",
       "src/client",
+      "src/client/routes",
     ]
   },
   module: {

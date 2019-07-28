@@ -6,14 +6,16 @@ import SectionNote from "shared/SectionNote";
 import ButtonsCode from "./elements/Buttons.html";
 import ButtonSizesCode from "./elements/ButtonSizes.html";
 import ButtonIconsCode from "./elements/ButtonIcons.html";
+import LoaderStylesCode from "./elements/LoaderStyles.html";
+import LoaderSizesCode from "./elements/LoaderSizes.html";
 
 const Elements = () => (
   <section id="view-elements" class="margin-bottom-xxlarge">
-    <Header title="Elements" />
+    <Header anchor="elements" title="Elements" />
 
     <div>
       <SubHeader title="Buttons" />
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue margin-bottom-small block">Button</button>
         </li>
@@ -38,7 +40,7 @@ const Elements = () => (
       <SectionNote>
         Button size classes can be used on any <span className="weight-bold">Button</span> style.
       </SectionNote>
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue btn-small margin-bottom-small block">Small</button>
         </li>
@@ -58,7 +60,7 @@ const Elements = () => (
         Button Icon classes can be used on any <span className="weight-bold">Button</span> style.
       </SectionNote>
 
-      <ul className="list-no-bullets row">
+      <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue btn-medium icon-arrow-left-white icon-left margin-bottom-small block">Button</button>
         </li>
@@ -70,6 +72,31 @@ const Elements = () => (
         </li>
       </ul>
       <CodeBlock>{ButtonIconsCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Loader Styles" />
+
+      <ul className="list-no-style row">
+        <li className="margin-xsmall">
+          <div className="loader-bars"></div>
+        </li>
+      </ul>
+      <CodeBlock>{LoaderStylesCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Loader Sizes" />
+
+      <ul className="list-no-style">
+        <li className="margin-xsmall">
+          <div className="loader-bars loader-small"></div>
+        </li>
+        <li className="margin-xsmall">
+          <div className="loader-bars loader-large"></div>
+        </li>
+      </ul>
+      <CodeBlock>{LoaderSizesCode}</CodeBlock>
     </div>
   </section>
 );
