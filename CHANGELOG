@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Add documentation for spacing, display, forms
 - Auto-generate checkbox documentation from config
 
-## [v1.0.0-alpha.3] - 2019-07-23
+## [v1.0.0-alpha.3] - 2019-07-28
 - Add documentation for layout, alignment, loaders, and utility classes
+- Add menu
 - Fix input field documentation
