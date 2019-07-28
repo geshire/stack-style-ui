@@ -13,7 +13,7 @@ import TextAlignmentCode from "./typography/TextAlignment.html";
 
 const Typography = () => (
   <section id="view-typography" class="margin-bottom-xxlarge">
-    <Header title="Typography" />
+    <Header anchor="typography" title="Typography" />
 
     <div>
       <SubHeader title="Headings" />

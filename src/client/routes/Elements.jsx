@@ -6,10 +6,12 @@ import SectionNote from "shared/SectionNote";
 import ButtonsCode from "./elements/Buttons.html";
 import ButtonSizesCode from "./elements/ButtonSizes.html";
 import ButtonIconsCode from "./elements/ButtonIcons.html";
+import LoaderStylesCode from "./elements/LoaderStyles.html";
+import LoaderSizesCode from "./elements/LoaderSizes.html";
 
 const Elements = () => (
   <section id="view-elements" class="margin-bottom-xxlarge">
-    <Header title="Elements" />
+    <Header anchor="elements" title="Elements" />
 
     <div>
       <SubHeader title="Buttons" />
@@ -70,6 +72,31 @@ const Elements = () => (
         </li>
       </ul>
       <CodeBlock>{ButtonIconsCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Loader Styles" />
+
+      <ul className="list-no-style row">
+        <li className="margin-xsmall">
+          <div className="loader-bars"></div>
+        </li>
+      </ul>
+      <CodeBlock>{LoaderStylesCode}</CodeBlock>
+    </div>
+
+    <div>
+      <SubHeader title="Loader Sizes" />
+
+      <ul className="list-no-style">
+        <li className="margin-xsmall">
+          <div className="loader-bars loader-small"></div>
+        </li>
+        <li className="margin-xsmall">
+          <div className="loader-bars loader-large"></div>
+        </li>
+      </ul>
+      <CodeBlock>{LoaderSizesCode}</CodeBlock>
     </div>
   </section>
 );

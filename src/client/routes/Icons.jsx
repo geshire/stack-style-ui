@@ -9,7 +9,7 @@ import IconSizesCode from "./icons/IconSizes.html";
 
 const Icons = ({ config, list }) => (
   <section id="view-icons" class="margin-bottom-xxlarge">
-    <Header title="Icons" />
+    <Header anchor="icons" title="Icons" />
 
     <div>
       <SubHeader title="Available Icons" />

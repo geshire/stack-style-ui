@@ -12,7 +12,7 @@ import InputFieldIconsCode from "./forms/InputFieldIcons.html";
 
 const Forms = ({ config }) => (
   <section id="view-fx" class="margin-bottom-xxlarge">
-    <Header title="Forms" />
+    <Header anchor="forms" title="Forms" />
 
     <div>
       <SubHeader title="Input Field Styles" />

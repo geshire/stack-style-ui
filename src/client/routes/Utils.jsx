@@ -6,7 +6,7 @@ import SectionNote from "shared/SectionNote";
 
 const Utils = () => (
   <section id="view-utils" class="margin-bottom-xxlarge">
-    <Header title="Utility Classes" />
+    <Header anchor="utils" title="Utility Classes" />
 
     <div>
       <SubHeader title="Display & Visibility/Transparency" />
