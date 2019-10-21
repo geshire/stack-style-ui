@@ -12,3 +12,7 @@ All notable changes to this project will be documented in this file.
 - Add documentation for layout, alignment, loaders, and utility classes
 - Add menu
 - Fix input field documentation
+
+## [v1.0.0-beta.1] - 2019-10-20
+- NPM Audit
+- Fix box sizing 
