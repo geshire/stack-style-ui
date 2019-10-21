@@ -26,7 +26,7 @@ render(
         </ul>
       </nav>
     </aside>
-    <main style={{ paddingLeft: "250px" }} className="width-100 height-100">
+    <main style={{ paddingLeft: "250px" }} className="width-100 height-100 border-box">
       <div className="padding-xlarge">
         <Typography />
         <Layout config={window.styles.layout} />
