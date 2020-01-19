@@ -15,12 +15,9 @@ const Forms = ({ config }) => (
     <Header anchor="forms" title="Forms" />
 
     <div>
-      <SubHeader title="Input Field Styles" />
+      <SubHeader isTop title="Input Field Styles" />
       <form className="form">
         <ul className="list-no-style">
-          <li className="margin-xsmall">
-            <input type="text" placeholder="Enter..." />
-          </li>
           {config.inputStyles.map(inputStyle => {
             if (inputStyle.name != "default") {
              return (
@@ -43,7 +40,7 @@ const Forms = ({ config }) => (
           if (inputSize.name != "default") {
            return (
              <li className="margin-xsmall">
-               <input type="text" className={`input-${config.inputStyles[0].name} input-${inputSize.name}`} placeholder="Enter..." />
+               <input type="text" className={`input-${config.inputStyles[1].name} input-${inputSize.name}`} placeholder="Enter..." />
              </li>
            );
          }
@@ -61,10 +58,10 @@ const Forms = ({ config }) => (
       <form className="form">
         <ul className="list-no-style">
            <li className="margin-xsmall">
-             <input type="text" className={`input-${config.inputStyles[0].name} icon-search-charcoal icon-right`} placeholder="Enter..." />
+             <input type="text" className={`input-${config.inputStyles[1].name} icon-search-charcoal icon-right`} placeholder="Enter..." />
            </li>
            <li className="margin-xsmall">
-             <input type="text" className={`input-${config.inputStyles[0].name} icon-search-charcoal icon-left`} placeholder="Enter..." />
+             <input type="text" className={`input-${config.inputStyles[1].name} icon-search-charcoal icon-left`} placeholder="Enter..." />
            </li>
         </ul>
       </form>
