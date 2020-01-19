@@ -14,7 +14,7 @@ const Fx = ({ config }) => (
     <Header anchor="fx" title="Fx" />
 
     <div>
-      <SubHeader title="Backgrounds" />
+      <SubHeader isTop title="Backgrounds" />
       <ul className="list-no-style row">
         {config.backgroundColors.map(bg => (
           <li className={`bg-${bg.name} padding-large margin-xsmall border-all`}>

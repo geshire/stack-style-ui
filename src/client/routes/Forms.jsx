@@ -15,7 +15,7 @@ const Forms = ({ config }) => (
     <Header anchor="forms" title="Forms" />
 
     <div>
-      <SubHeader title="Input Field Styles" />
+      <SubHeader isTop title="Input Field Styles" />
       <form className="form">
         <ul className="list-no-style">
           {config.inputStyles.map(inputStyle => {

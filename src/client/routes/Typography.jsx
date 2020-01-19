@@ -19,7 +19,7 @@ const Typography = () => (
     </SectionNote>
 
     <div>
-      <SubHeader title="Headings" />
+      <SubHeader isTop title="Headings" />
       <ul className="list-no-style">
         <li>
           <h3 className="head-1">Heading 1</h3>
@@ -103,7 +103,7 @@ const Typography = () => (
     <div>
       <SubHeader title="Text w/ Icons" />
       <SectionNote>
-        Icon classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles. See the <a href="#icons">Icons Section</a> for available icons.
+        Icon classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles. For proper alignment the Icon and Text/Header class must be on the same element. See the <a href="#icons">Icons Section</a> for available icons.
       </SectionNote>
 
       <div>

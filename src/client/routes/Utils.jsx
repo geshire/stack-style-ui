@@ -9,7 +9,7 @@ const Utils = () => (
     <Header anchor="utils" title="Utility Classes" />
 
     <div>
-      <SubHeader title="Display & Visibility/Transparency" />
+      <SubHeader isTop title="Display & Visibility/Transparency" />
       <table className="text-2 table-striped">
         <tr>
           <td className="border-bottom padding-small weight-semi border-right"><code>border-box</code></td>

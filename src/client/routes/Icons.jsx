@@ -12,7 +12,7 @@ const Icons = ({ config, list }) => (
     <Header anchor="icons" title="Icons" />
 
     <div>
-      <SubHeader title="Available Icons" />
+      <SubHeader isTop title="Available Icons" />
       <SectionNote>
         Labels are the html class for each icon.
       </SectionNote>

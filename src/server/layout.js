@@ -5,7 +5,7 @@ export default (config) => `
       <title>Style Guide</title>
       ${config.head}
       ${config.favicon ?
-        `<link rel="shortcut icon" type="image/x-icon" href="${config.favicon}" />` : ""
+        `<link rel="shortcut icon" type="image/x-icon" href="/${config.favicon}" />` : ""
       }
       <link href="${config.baseUrl}/guide-styles.bundle.css" media="screen" rel="stylesheet" type="text/css">
       <link href="${config.baseUrl}/styles.min.css" media="screen" rel="stylesheet" type="text/css">

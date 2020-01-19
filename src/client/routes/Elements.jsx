@@ -15,7 +15,7 @@ const Elements = () => (
     <Header anchor="elements" title="Elements" />
 
     <div>
-      <SubHeader title="Buttons" />
+      <SubHeader isTop title="Buttons" />
       <ul className="list-no-style row">
         <li className="margin-xsmall">
           <button className="btn-blue margin-bottom-small block">Button</button>
@@ -72,7 +72,7 @@ const Elements = () => (
     <div>
       <SubHeader title="Buttons w/ Icons" />
       <SectionNote>
-        Button Icon classes can be used on any <span className="weight-bold">Button</span> style. See the <a href="#icons">Icons Section</a> for available icons.
+        Button Icon classes can be used on any <span className="weight-bold">Button</span> style. For proper alignment a size (e.g. <span className="italic">btn-small</span>, etc) class is required. See the <a href="#icons">Icons Section</a> for available icons.
       </SectionNote>
 
       <ul className="list-no-style row">

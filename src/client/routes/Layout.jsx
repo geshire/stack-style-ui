@@ -17,7 +17,7 @@ const Layout = ({ config }) => (
     <Header anchor="layout" title="Layout" />
 
     <div>
-      <SubHeader title="Flexbox Rows & Columns" />
+      <SubHeader isTop title="Flexbox Rows & Columns" />
       <SectionNote>
         Simple grid systems with rows and columns can be created with a few classes. Width classes (shown below in the table) can be used both within a row or independently.
       </SectionNote>
@@ -240,6 +240,9 @@ const Layout = ({ config }) => (
 
     <div>
       <SubHeader title="Spacing / Padding" />
+      <SectionNote>
+        The space within an element that pushes any containing content inward.
+      </SectionNote>
       <ul className="list-no-style">
         {config.spacingSizes.map(space => (
           <li className={`border-all inline-block padding-${space.name} margin-small bg-gray-light`}>
@@ -252,6 +255,10 @@ const Layout = ({ config }) => (
 
     <div>
       <SubHeader title="Spacing / Margin" />
+      <SectionNote>
+        The space around an element that pushes away any surrounding content.
+      </SectionNote>
+
       <ul className="list-no-style">
         {config.spacingSizes.map(space => (
           <li style={{
@@ -271,35 +278,58 @@ const Layout = ({ config }) => (
 
     <div>
       <SubHeader title="Lists" />
-      <div className="margin-vert-large">
-        <ul className="list-no-style">
-          <li>List item 1</li>
-          <li>List item 2</li>
-        </ul>
+      <div className="margin-bottom-xlarge">
+        <SectionNote>
+          Remove the default browser styling for a list with the <span className="italic">list-no-style</span> class.
+        </SectionNote>
+        <div className="margin-vert-medium">
+          <ul className="list-no-style">
+            <li>List item 1</li>
+            <li>List item 2</li>
+          </ul>
+        </div>
+        <CodeBlock>{Lists("list-no-style")}</CodeBlock>
       </div>
-      <CodeBlock>{Lists("list-no-style")}</CodeBlock>
 
-      <div className="margin-vert-large">
-        <ul className="list-no-style list-striped">
-          <li>List item 1</li>
-          <li>List item 2</li>
-          <li>List item 3</li>
-        </ul>
+      <div className="margin-bottom-xlarge">
+        <SectionNote>
+          Give list rows alternating backgrounds with the <span className="italic">list-striped</span> class.
+        </SectionNote>
+        <div className="margin-vert-medium">
+          <ul className="list-no-style list-striped">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ul>
+        </div>
+        <CodeBlock>{Lists("list-no-style list-striped")}</CodeBlock>
       </div>
-      <CodeBlock>{Lists("list-no-style list-striped")}</CodeBlock>
 
-      <div className="margin-vert-large">
-        <ul className="list-no-style list-inline">
-          <li>List item 1</li>
-          <li>List item 2</li>
-        </ul>
+      <div className="margin-bottom-xlarge">
+        <SectionNote>
+          Align list items side by side with the <span className="italic">list-inline</span> class.
+        </SectionNote>
+        <div className="margin-vert-medium">
+          <ul className="list-no-style list-inline">
+            <li>List item 1</li>
+            <li>List item 2</li>
+          </ul>
+        </div>
+        <CodeBlock>{Lists("list-no-style list-inline")}</CodeBlock>
       </div>
-      <CodeBlock>{Lists("list-no-style list-inline")}</CodeBlock>
     </div>
 
     <div>
       <SubHeader title="Layout Utilities" />
       <table className="text-2 table-striped">
+        <tr>
+          <td className="border-bottom padding-small weight-semi border-right"><code>width-page</code></td>
+          <td className="border-bottom padding-small">Sets a containing element to have a maximum width of 1300px and horizontal padding that decreases for smaller screen sizes.</td>
+        </tr>
+        <tr>
+          <td className="border-bottom padding-small weight-semi border-right"><code>width-centered</code></td>
+          <td className="border-bottom padding-small">Centers a container that has a defined width.</td>
+        </tr>
         <tr>
           <td className="border-bottom padding-small weight-semi border-right"><code>border-box</code></td>
           <td className="border-bottom padding-small">Sets the element to use border-box sizing (as opposed to the default content-box)</td>
