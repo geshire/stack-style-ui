@@ -23,6 +23,8 @@ export default (config) => {
       head: config.head,
       styles: config.styles,
       logo: config.logo,
+      favicon: config.favicon,
+      customCSS: config.customCSS,
     }));
   });
 

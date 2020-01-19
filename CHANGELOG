@@ -8,11 +8,17 @@ All notable changes to this project will be documented in this file.
 - Add documentation for spacing, display, forms
 - Auto-generate checkbox documentation from config
 
-## [v1.0.0-alpha.3] - 2019-07-28
+## [v0.1.0-alpha.3] - 2019-07-28
 - Add documentation for layout, alignment, loaders, and utility classes
 - Add menu
 - Fix input field documentation
 
-## [v1.0.0-beta.1] - 2019-10-20
+## [v0.1.0-beta.1] - 2019-10-20
 - NPM Audit
-- Fix box sizing 
+- Fix box sizing
+
+## [v0.1.0-beta.2] - 2020-01-18
+- NPM Audit
+- Add documentation for flexbox, button group, width, line spacing, text variant classes and responsive pre-fixes.
+- Add favicon config option
+- Add custom css config option

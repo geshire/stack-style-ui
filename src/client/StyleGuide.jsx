@@ -7,6 +7,7 @@ import Icons from "./routes/Icons";
 import Forms from "./routes/Forms";
 import Layout from "./routes/Layout";
 import Utils from "./routes/Utils";
+import Responsive from "./routes/Responsive";
 
 render(
   <div className="relative">
@@ -23,6 +24,7 @@ render(
           <li className="padding-bottom-small"><a className="text-1 weight-semi color-white hover-no-underline" href="#forms">Forms</a></li>
           <li className="padding-bottom-small"><a className="text-1 weight-semi color-white hover-no-underline" href="#icons">Icons</a></li>
           <li className="padding-bottom-small"><a className="text-1 weight-semi color-white hover-no-underline" href="#utils">Utils</a></li>
+          <li className="padding-bottom-small"><a className="text-1 weight-semi color-white hover-no-underline" href="#responsive">Responsive</a></li>
         </ul>
       </nav>
     </aside>
@@ -35,6 +37,7 @@ render(
         <Forms config={window.styles.forms} />
         <Icons config={window.styles.icons} list={window.styles.iconList} />
         <Utils />
+        <Responsive />
       </div>
     </main>
   </div>,

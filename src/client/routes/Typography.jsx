@@ -14,6 +14,9 @@ import TextAlignmentCode from "./typography/TextAlignment.html";
 const Typography = () => (
   <section id="view-typography" class="margin-bottom-xxlarge">
     <Header anchor="typography" title="Typography" />
+    <SectionNote>
+      Typography classes are element agnostic. Any type class can be applied to any element. This allows you to use the most appropriate semantic html element regardless of its visual appearance.
+    </SectionNote>
 
     <div>
       <SubHeader title="Headings" />
@@ -53,25 +56,27 @@ const Typography = () => (
     <div>
       <SubHeader title="Text Variants" />
       <SectionNote>
-        Text variant classes can be used on or within any <span className="weight-bold">Text</span> style.
+        Text variant classes can be used on or within any <span className="weight-bold">Text</span> or  <span className="weight-bold">Heading</span> style.
       </SectionNote>
-
-      <p className="text-2 weight-bold">Bold</p>
-      <p className="text-2 weight-semi">Semibold</p>
-      <p className="text-2 italic">Italic</p>
-      <p className="text-2 upper">Uppercase</p>
+      <p className="head-3 weight-light">Light</p>
+      <p className="head-3 weight-semi margin-vert-xxsmall">Semibold</p>
+      <p className="head-3 weight-bold margin-vert-xxsmall">Bold</p>
+      <p className="head-3 italic margin-vert-xxsmall">Italic</p>
+      <p className="head-3 upper margin-vert-xxsmall">Uppercase</p>
+      <p className="head-3 lower">Lowercase</p>
       <CodeBlock>{VariantsCode}</CodeBlock>
     </div>
 
     <div>
       <SubHeader title="Line spacing" />
       <SectionNote>
-        Line spacing classes can be used on or within any <span className="weight-bold">Text</span> style.
+        Line spacing classes can be used on or within any <span className="weight-bold">Text</span> style. Line spacing classes will not apply to <span className="weight-bold">Heading</span> styles, as they have fixed line-heights.
       </SectionNote>
 
       <div style={{width: "300px"}}>
-        <p className="text-2 margin-bottom-medium">Normal line spacing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p className="text-2 line-tight margin-bottom-medium">Tight line spacing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-2 margin-bottom-medium">Normal line spacing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-2 line-tight margin-bottom-medium">Tight line spacing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-2 line-wide margin-bottom-medium">Wide line spacing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
       <CodeBlock>{LineHeightCode}</CodeBlock>
@@ -80,7 +85,7 @@ const Typography = () => (
     <div>
       <SubHeader title="Font colors" />
       <SectionNote>
-        Color classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles.
+        Color classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles. They can also be used on links. The default link color will be overridden.
       </SectionNote>
 
       <div>
@@ -98,7 +103,7 @@ const Typography = () => (
     <div>
       <SubHeader title="Text w/ Icons" />
       <SectionNote>
-        Icon classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles.
+        Icon classes can be used on both <span className="weight-bold">Heading</span> and <span className="weight-bold">Text</span> styles. See the <a href="#icons">Icons Section</a> for available icons.
       </SectionNote>
 
       <div>
@@ -130,13 +135,13 @@ const Typography = () => (
             left
           </li>
           <li
-            className="text-left padding-small margin-xsmall border-all"
+            className="text-center padding-small margin-xsmall border-all"
             style={{ width: "200px"}}
           >
             center
           </li>
           <li
-            className="text-left padding-small margin-xsmall border-all"
+            className="text-right padding-small margin-xsmall border-all"
             style={{ width: "200px"}}
           >
             right
